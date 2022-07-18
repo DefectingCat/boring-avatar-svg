@@ -1,11 +1,19 @@
 import { Button } from 'ui';
-import hello from 'boring-avatar-svg';
+import avatar from 'boring-avatar-svg';
 
 export default function Web() {
+  const defaultAvatar = avatar({
+    variant: 'bauhaus',
+  });
+
   return (
     <div>
       <h1>Web</h1>
-      <h2>{hello()}</h2>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: defaultAvatar,
+        }}
+      ></div>
       <Button />
     </div>
   );
