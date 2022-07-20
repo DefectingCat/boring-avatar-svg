@@ -19,6 +19,11 @@ export default function Web() {
       variant: 'marble',
     })
   );
+  const [pixel, setPixel] = useState(
+    avatar({
+      variant: 'pixel',
+    })
+  );
 
   const handleClick = useCallback((size: number) => {
     setPic(
@@ -36,6 +41,12 @@ export default function Web() {
     setMarble(
       avatar({
         variant: 'marble',
+        size,
+      })
+    );
+    setPixel(
+      avatar({
+        variant: 'pixel',
         size,
       })
     );
@@ -75,6 +86,11 @@ export default function Web() {
       <div
         dangerouslySetInnerHTML={{
           __html: marble,
+        }}
+      ></div>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: pixel,
         }}
       ></div>
     </div>
