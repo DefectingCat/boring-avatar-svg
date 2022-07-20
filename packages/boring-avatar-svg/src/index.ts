@@ -2,6 +2,7 @@ import avatarBauhaus from './components/avatar-bauhaus';
 import avatarBeam from './components/avatar-beam';
 import avatarMarble from './components/avatar-marble';
 import avatarPixel from './components/avatar-pixel';
+import avatarRing from './components/avatar-ring';
 
 type Variants = 'pixel' | 'bauhaus' | 'ring' | 'beam' | 'sunset' | 'marble';
 type Props = {
@@ -43,6 +44,7 @@ const avatar = (props?: Props) => {
     beam: () => avatarBeam(avatarProps),
     marble: () => avatarMarble(avatarProps),
     pixel: () => avatarPixel(avatarProps),
+    ring: () => avatarRing(avatarProps),
   };
 
   return avatars[checkedVariant()]();

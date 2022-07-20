@@ -24,6 +24,11 @@ export default function Web() {
       variant: 'pixel',
     })
   );
+  const [ring, setRing] = useState(
+    avatar({
+      variant: 'ring',
+    })
+  );
 
   const handleClick = useCallback((size: number) => {
     setPic(
@@ -47,6 +52,12 @@ export default function Web() {
     setPixel(
       avatar({
         variant: 'pixel',
+        size,
+      })
+    );
+    setRing(
+      avatar({
+        variant: 'ring',
         size,
       })
     );
@@ -91,6 +102,11 @@ export default function Web() {
       <div
         dangerouslySetInnerHTML={{
           __html: pixel,
+        }}
+      ></div>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: ring,
         }}
       ></div>
     </div>
