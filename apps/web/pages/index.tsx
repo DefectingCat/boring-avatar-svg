@@ -14,6 +14,11 @@ export default function Web() {
       variant: 'beam',
     })
   );
+  const [marble, setMarble] = useState(
+    avatar({
+      variant: 'marble',
+    })
+  );
 
   const handleClick = useCallback((size: number) => {
     setPic(
@@ -25,6 +30,12 @@ export default function Web() {
     setBeam(
       avatar({
         variant: 'beam',
+        size,
+      })
+    );
+    setMarble(
+      avatar({
+        variant: 'marble',
         size,
       })
     );
@@ -48,7 +59,7 @@ export default function Web() {
       >
         <Button onClick={() => handleClick(40)}>small</Button>
         <Button onClick={() => handleClick(80)}>medium</Button>
-        <Button onClick={() => handleClick(120)}>large</Button>
+        <Button onClick={() => handleClick(128)}>large</Button>
       </div>
 
       <div
@@ -56,10 +67,14 @@ export default function Web() {
           __html: pic,
         }}
       ></div>
-
       <div
         dangerouslySetInnerHTML={{
           __html: beam,
+        }}
+      ></div>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: marble,
         }}
       ></div>
     </div>
