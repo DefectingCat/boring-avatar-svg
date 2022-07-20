@@ -9,11 +9,22 @@ export default function Web() {
       variant: 'bauhaus',
     })
   );
+  const [beam, setBeam] = useState(
+    avatar({
+      variant: 'beam',
+    })
+  );
 
   const handleClick = useCallback((size: number) => {
     setPic(
       avatar({
         variant: 'bauhaus',
+        size,
+      })
+    );
+    setBeam(
+      avatar({
+        variant: 'beam',
         size,
       })
     );
@@ -43,6 +54,12 @@ export default function Web() {
       <div
         dangerouslySetInnerHTML={{
           __html: pic,
+        }}
+      ></div>
+
+      <div
+        dangerouslySetInnerHTML={{
+          __html: beam,
         }}
       ></div>
     </div>
