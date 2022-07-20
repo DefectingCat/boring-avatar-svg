@@ -29,6 +29,11 @@ export default function Web() {
       variant: 'ring',
     })
   );
+  const [sunset, setSunset] = useState(
+    avatar({
+      variant: 'sunset',
+    })
+  );
 
   const handleClick = useCallback((size: number) => {
     setPic(
@@ -58,6 +63,12 @@ export default function Web() {
     setRing(
       avatar({
         variant: 'ring',
+        size,
+      })
+    );
+    setSunset(
+      avatar({
+        variant: 'sunset',
         size,
       })
     );
@@ -107,6 +118,11 @@ export default function Web() {
       <div
         dangerouslySetInnerHTML={{
           __html: ring,
+        }}
+      ></div>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: sunset,
         }}
       ></div>
     </div>
