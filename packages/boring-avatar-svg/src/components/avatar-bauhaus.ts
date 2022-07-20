@@ -37,8 +37,8 @@ const avatarBauhaus = (props: Required<AvatarProps>) => {
   <mask
     id="mask__bauhaus"
     mask-units="userSpaceOnUse"
-    x=0
-    y=0
+    x="0"
+    y="0"
     width=${SIZE}
     height=${SIZE}
   >

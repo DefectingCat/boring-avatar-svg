@@ -5,8 +5,14 @@ import avatarPixel from './components/avatar-pixel';
 import avatarRing from './components/avatar-ring';
 import avatarSunset from './components/avatar-sunset';
 
-type Variants = 'pixel' | 'bauhaus' | 'ring' | 'beam' | 'sunset' | 'marble';
-type Props = {
+export type Variants =
+  | 'pixel'
+  | 'bauhaus'
+  | 'ring'
+  | 'beam'
+  | 'sunset'
+  | 'marble';
+export type Props = {
   variant?: Variants;
 } & AvatarProps;
 export type AvatarProps = {

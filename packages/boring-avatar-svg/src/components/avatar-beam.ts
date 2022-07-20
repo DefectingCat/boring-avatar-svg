@@ -57,39 +57,39 @@ const avatarBeam = (props: Required<AvatarProps>) => {
   fill="none"
   role="img"
   xmlns="http://www.w3.org/2000/svg"
-  width=${props.size}
-  height=${props.size}
+  width="${props.size}"
+  height="${props.size}"
 >
   ${props.title ? `<title>${props.name}</title>` : ''}
   <mask
     id="mask__beam"
     maskUnits="userSpaceOnUse"
-    x=0
-    y=0
-    width=${SIZE}
-    height=${SIZE}
+    x="0"
+    y="0"
+    width="${SIZE}"
+    height="${SIZE}"
   >
     <rect
-      width=${SIZE}
-      height=${SIZE}
-      rx=${props.square ? undefined : SIZE * 2}
+      width="${SIZE}"
+      height="${SIZE}"
+      rx="${props.square ? undefined : SIZE * 2}"
       fill="#FFFFFF"
     />
   </mask>
   <g mask="url(#mask__beam)">
-    <rect width=${SIZE} height=${SIZE} fill=${data.backgroundColor} />
+    <rect width="${SIZE}" height="${SIZE}" fill="${data.backgroundColor}" />
     <rect
       x="0"
       y="0"
-      width=${SIZE}
-      height=${SIZE}
+      width="${SIZE}"
+      height="${SIZE}"
       transform=${`"translate(${data.wrapperTranslateX} ${
         data.wrapperTranslateY
       }) rotate(${data.wrapperRotate} ${SIZE / 2} ${SIZE / 2}) scale(${
         data.wrapperScale
       })"`}
-      fill=${data.wrapperColor}
-      rx=${data.isCircle ? SIZE : SIZE / 6}
+      fill="${data.wrapperColor}"
+      rx="${data.isCircle ? SIZE : SIZE / 6}"
     />
     <g
       transform=${
@@ -110,7 +110,7 @@ const avatarBeam = (props: Required<AvatarProps>) => {
         data.isMouthOpen
           ? `<path
           d=${'"M15 ' + (19 + data.mouthSpread) + 'c2 1 4 1 6 0"'}
-          stroke=${data.faceColor}
+          stroke="${data.faceColor}"
           fill="none"
           strokeLinecap="round"
         />`
@@ -120,22 +120,22 @@ const avatarBeam = (props: Required<AvatarProps>) => {
         />`
       }
       <rect
-        x=${14 - data.eyeSpread}
-        y=14
-        width=1.5
-        height=2
-        rx=1
+        x="${14 - data.eyeSpread}"
+        y="14"
+        width="1.5"
+        height="2"
+        rx="1"
         stroke="none"
-        fill=${data.faceColor}
+        fill="${data.faceColor}"
       />
       <rect
-        x=${20 + data.eyeSpread}
-        y=14
-        width=1.5
-        height=2
-        rx=1
+        x="${20 + data.eyeSpread}"
+        y="14"
+        width="1.5"
+        height="2"
+        rx="1"
         stroke="none"
-        fill=${data.faceColor}
+        fill="${data.faceColor}"
       />
     </g>
   </g>

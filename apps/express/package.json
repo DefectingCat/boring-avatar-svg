@@ -14,7 +14,8 @@
     "express-winston": "^4.2.0",
     "helmet": "^5.1.0",
     "http-status-codes": "^2.2.0",
-    "winston": "^3.8.1"
+    "winston": "^3.8.1",
+    "boring-avatar-svg": "*"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
